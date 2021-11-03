@@ -2,10 +2,7 @@ class Solution {
 public:
     int search(vector<int>& nums, int target) {
         int midPos = nums.size()/2;
-        // cout << midPos;
-        int result = compareMidPos(nums,midPos,nums.size()/2,target);
-        // cout << result;
-        return result;
+        return compareMidPos(nums,midPos,nums.size()/2,target);
     }
 
     int compareMidPos(vector<int>& nums, int &pos, int size, int target) {

@@ -12,7 +12,7 @@ public:
         return size;
     }
 
-    void switchElement(vector<int>& nums, int pos_1, int pos_2) {
+    void switchElement(vector<int>& nums, int pos_1, int pos_2) {       //交换数组中pos_1与pos_2两位置的元素
         int a;
         a = nums[pos_1];
         nums[pos_1] = nums[pos_2];

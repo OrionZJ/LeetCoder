@@ -3,7 +3,7 @@ public:
     int removeElement(vector<int>& nums, int val) {
         int size = nums.size();
         for (int i = 0; i < size; i++) {
-            if (nums[i] == val) {
+            if (nums[i] == val) {       //如果i位置元素为待移除元素，将其与数组末尾元素交换
                 switchElement(nums,i,size - 1);
                 size--;
                 i--;

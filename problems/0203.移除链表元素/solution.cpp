@@ -11,8 +11,8 @@
 class Solution {
 public:
     ListNode* removeElements(ListNode* head, int val) {
-    struct ListNode *dummyHead = new ListNode(0, head);
-    struct ListNode *p = dummyHead;
+    struct ListNode *dummyHead = new ListNode(0, head);    //设置虚拟头结点
+    struct ListNode *p = dummyHead;    //结构体指针指向虚拟头结点
     while (p->next!=NULL) {
         if (p->next->val == val) {
             struct ListNode *p1 = p->next;
@@ -22,6 +22,6 @@ public:
             p = p->next;
         }
     }
-    return dummyHead->next;
+    return dummyHead->next;    //注意此处返回虚拟指针的next，即真正的头指针
     }
 };

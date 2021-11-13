@@ -9,21 +9,24 @@
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        //初始化虚拟头结点
-        struct ListNode *dummyHead = new ListNode(0);
-        dummyHead->next = head;
         //初始化快、慢指针
-        struct ListNode *fastPointer = dummyHead;
-        struct ListNode *slowPointer = dummyHead;
-        int fastStep = 0;
-        int slowStep = 0;
+        struct ListNode *fastPointer = head;
+        struct ListNode *slowPointer = head;
         while (fastPointer != NULL && fastPointer != slowPointer) {
-            if (fastPointer->next != NULL && fastPointer->next->next != NULL) {
+            if (fastPointer->next != NULL) {
                 fastPointer = fastPointer->next->next;
-                fastStep += 2;
                 slowPointer = slowPointer->next;
-                slowStep++;
+            } else {
+                fastPointer = fastPointer->next;
             }
         }
+        if (fastPointer == NULL) return fastPointer;
+        struct ListNode *temp1 = fastPointer;
+        struct ListNode *temp2 = head;
+        while(temp1 != temp2) {
+            temp1 = temp1->next;
+            temp2 = temp2->next;
+        }
+        return temp1;
     }
 };

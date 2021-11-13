@@ -12,21 +12,26 @@ public:
         //初始化快、慢指针
         struct ListNode *fastPointer = head;
         struct ListNode *slowPointer = head;
-        while (fastPointer != NULL && fastPointer != slowPointer) {
+        while (fastPointer != NULL) {
             if (fastPointer->next != NULL) {
                 fastPointer = fastPointer->next->next;
                 slowPointer = slowPointer->next;
+                if (fastPointer == slowPointer) break;
+                
             } else {
-                fastPointer = fastPointer->next;
+                fastPointer = NULL;
             }
         }
-        if (fastPointer == NULL) return fastPointer;
-        struct ListNode *temp1 = fastPointer;
-        struct ListNode *temp2 = head;
-        while(temp1 != temp2) {
-            temp1 = temp1->next;
-            temp2 = temp2->next;
+        if (fastPointer == NULL) return NULL;
+        if (fastPointer == slowPointer) {       
+            struct ListNode *temp1 = fastPointer;
+            struct ListNode *temp2 = head;
+            while(temp1 != temp2) {
+                temp1 = temp1->next;
+                temp2 = temp2->next;
+            }
+            return temp1;
         }
-        return temp1;
+        return NULL;
     }
 };

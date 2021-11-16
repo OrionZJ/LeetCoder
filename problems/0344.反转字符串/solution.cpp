@@ -16,10 +16,17 @@ public:
         b = temp;
     }
 
+    //使用位运算交换两数，无需使用第三个数
     void swap_2(char &a, char &b) {
         a ^= b;
         b ^= a;
         a ^= b;
+    }
+
+    void swap_int(int &a, int &b) {
+        a = a + b;
+        b = a - b;
+        a = a - b;
     }
 };
 

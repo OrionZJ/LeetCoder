@@ -15,7 +15,17 @@ public:
             left = right;
         }
         //去掉多余空格：
-
+        left = 0; right = 0;
+        while (s[right] == ' ') right++;    //right指到第一个单词头
+        while (right < s.size() - 1) {
+            while (s[right] != ' ' && right < s.size() ) {    //right指到词尾第一个空格，并移除right左边多余空格
+                s[left++] = s[right++];
+            }
+            while (s[right + 1] == ' ' && right < s.size()) right++;    //right指到下一单词前空格
+            if (right < s.size() - 1) s[left++] = s[right++];
+        }
+        s.resize(left + 1);
+        return s;
     }
     //反转闭区间
     void reverse(int left, int right, string &s) {

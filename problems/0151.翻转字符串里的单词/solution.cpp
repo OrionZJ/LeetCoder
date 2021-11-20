@@ -14,17 +14,8 @@ public:
             reverse(left,right - 1,s);
             left = right;
         }
-        //去掉多余空格：
-        left = 0; right = 0;
-        while (s[right] == ' ') right++;    //right指到第一个单词头
-        while (right < s.size() - 1) {
-            while (s[right] != ' ' && right < s.size() ) {    //right指到词尾第一个空格，并移除right左边多余空格
-                s[left++] = s[right++];
-            }
-            while (s[right + 1] == ' ' && right < s.size()) right++;    //right指到下一单词前空格
-            if (right < s.size() - 1) s[left++] = s[right++];
-        }
-        s.resize(left + 1);
+        //去掉多余空格
+        removeExtraSpaces(s);
         return s;
     }
     //反转闭区间
@@ -39,5 +30,28 @@ public:
         s[left] ^= s[right];
         s[right] ^= s[left];
         s[left] ^= s[right];
+    }
+
+    void removeExtraSpaces(string& s) {
+        int slowIndex = 0, fastIndex = 0; // 定义快指针，慢指针
+        // 去掉字符串前面的空格
+        while (s.size() > 0 && fastIndex < s.size() && s[fastIndex] == ' ') {
+            fastIndex++;
+        }
+        for (; fastIndex < s.size(); fastIndex++) {
+            // 去掉字符串中间部分的冗余空格
+            if (fastIndex - 1 > 0
+                    && s[fastIndex - 1] == s[fastIndex]
+                    && s[fastIndex] == ' ') {
+                continue;
+            } else {
+                s[slowIndex++] = s[fastIndex];
+            }
+        }
+        if (slowIndex - 1 > 0 && s[slowIndex - 1] == ' ') { // 去掉字符串末尾的空格
+            s.resize(slowIndex - 1);
+        } else {
+            s.resize(slowIndex); // 重新设置字符串大小
+        }
     }
 };

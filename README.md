@@ -22,3 +22,4 @@ LeetCode刷题记录与算法整理
 ### 字符串
   - 反转（[互换元素](problems/0344.反转字符串/反转字符串.md)）
   - [替换](problems\剑指Offer05.替换空格\solution.cpp)
+  - 移除多余空格

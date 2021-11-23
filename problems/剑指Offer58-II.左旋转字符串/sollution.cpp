@@ -2,16 +2,10 @@ class Solution {
 public:
     string reverseLeftWords(string s, int n) {
         //先整体反转
-        int left = 0;
-        int right = s.size() - 1;
-        reverse(left,right,s);
+        reverse(0,s.size() - 1,s);
         //再局部反转 
-        right = right - n;
-        reverse(left,right,s);
-
-        left = right + 1;
-        right = s.size() - 1;
-        reverse(left,right,s);
+        reverse(0,s.size() - 1 - n,s);
+        reverse(s.size() - n,s.size() - 1,s);
         return s;
     }
     //交换两下角标对应元素

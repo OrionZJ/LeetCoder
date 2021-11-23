@@ -20,6 +20,6 @@ LeetCode刷题记录与算法整理
     - 通过数学寻找规律完成解题
 
 ### 字符串
-  - 反转（[互换元素](problems/0344.反转字符串/反转字符串.md)）
-  - [替换](problems\剑指Offer05.替换空格\solution.cpp)
-  - 移除多余空格
+  - 反转顺序（[互换元素](problems/0344.反转字符串/反转字符串.md)）
+  - [替换空格](problems\剑指Offer05.替换空格\solution.cpp)
+  - [整体＋局部](problems/剑指Offer58-II.左旋转字符串/sollution.cpp)（反转）－－不申请额外空间完成操作

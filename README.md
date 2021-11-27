@@ -23,3 +23,4 @@ LeetCode刷题记录与算法整理
   - 反转顺序（[互换元素](problems/0344.反转字符串/反转字符串.md)）
   - [替换空格](problems\剑指Offer05.替换空格\solution.cpp)
   - [整体＋局部](problems/剑指Offer58-II.左旋转字符串/sollution.cpp)（反转）－－不申请额外空间完成操作
+  - [KMP算法](problems/0028.实现strStr()/KMP算法.md)

@@ -54,6 +54,15 @@ void getNext(int *next, const string &s) {    //计算前缀表
     }
 }
 ```
+个人编了个小口诀**仅供娱乐**，无论什么方法，能在**理解原理**的基础上记住创建Next数组的方法就是好方法：
+
+    首位置零位，    //next[0] = 0;
+    先算第一位。    //int i = 1;
+    不同一直退，    //此条语句须使用循环语句 j = next[j - 1];
+    不能越首位。    //循环条件还有j > 0
+    相同进一位，    //if (s[i] == s[j]) j++;
+    next恰为j。    //next[i] = j;
+
 # 怎么使用Next数组
 
 这里就先只说第一种Next数组构建方法的使用。
@@ -83,3 +92,4 @@ int strStr(string haystack, string needle) {
         }
     }
 ```
+

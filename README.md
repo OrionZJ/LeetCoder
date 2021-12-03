@@ -27,6 +27,7 @@ LeetCode刷题记录与算法整理
 在C++中，提供一个string类，string类会提供 size接口，可以用来判断string类字符串是否结束，就不用'\0'来判断是否结束。
 
 vector< char > 和 string 在基本操作上没有区别，但是 string提供更多的字符串处理的相关接口，例如string 重载了+，而vector却没有。
+
   - 反转顺序（[互换元素](problems/0344.反转字符串/反转字符串.md)）
   - [替换空格](problems/剑指Offer05.替换空格/solution.cpp)
   - [整体＋局部](problems/剑指Offer58-II.左旋转字符串/solution.cpp)（反转）－－不申请额外空间完成操作

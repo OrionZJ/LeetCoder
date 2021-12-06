@@ -23,7 +23,6 @@ int main(void) {
             y *= 2;
         }
 
-
     }
 
     cout << x << endl << y;

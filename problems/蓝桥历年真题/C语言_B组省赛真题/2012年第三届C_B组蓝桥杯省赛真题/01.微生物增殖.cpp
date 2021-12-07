@@ -26,5 +26,6 @@ int main(void) {
     }
 
     cout << x << endl << y;
+    return 0;
 }
 

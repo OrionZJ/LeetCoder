@@ -30,6 +30,6 @@ void solve(int grade, int index, int num[]) {
 
 int main(void) {
     int num[11] = {0,};
-    solve(10, 1, num);
+    solve(10, 1, num); 
     return 0;
 }

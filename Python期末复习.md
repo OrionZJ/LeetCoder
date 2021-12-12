@@ -851,3 +851,27 @@ d = Dog("毛毛",5,"黑色")
 d.feed()
 d.show()
 ```
+
+# CH6以后
+
+## 掌握第三方库的安装方法
+
+```
+pip install xxx
+```
+
+## 窗体的定义方法
+
+```python
+import tkinter  #导入模块
+win = tkinter.TK()  #创建窗体实例对象
+win.mainloop  #显示窗体进入监听循环
+```
+
+## 窗体属性的设置方法
+```python
+win.geometry("1024x768")
+win.minsize(800,600)
+win.maxsize(1440,900)
+```
+（具体组件不做要求）

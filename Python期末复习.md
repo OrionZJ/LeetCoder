@@ -821,3 +821,33 @@ person.say('hahaha')
 方法的重写。注意代码重用（调用父类的构造方法，调用父类的公有方法）。
 
 重点掌握（会应用）：类的定义与继承，方法的重写，类的实例化，方法的调用。
+
+```python
+class Pet:
+    nickName = ""
+    health = 0
+    def __init__(self, name, health) -> None:
+        self.nickName = name
+        self.health = health
+
+    def show(self):
+        print("Name:",self.nickName)
+        print("Health:",self.health)
+
+class Dog(Pet):
+    color = ""
+    def __init__(self, name, health, color) -> None:
+        super().__init__(name, health)
+        self.color = color
+
+    def show(self):
+        super().show()
+        print("Color:",self.color)
+
+    def feed(self):
+        self.health += 5
+
+d = Dog("毛毛",5,"黑色")
+d.feed()
+d.show()
+```

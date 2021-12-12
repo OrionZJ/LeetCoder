@@ -24,3 +24,5 @@ bool next_permutation(iterator start,iterator end)    //左闭右开区间
 判断小于的时候，就是`if(a<b&&fabs(a-b)>1e-6)`。
 
 > fabs是求浮点数绝对值的函数。
+
+# rand()函数

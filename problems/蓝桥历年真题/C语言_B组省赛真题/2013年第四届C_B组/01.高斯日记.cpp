@@ -23,11 +23,9 @@ int main(void) {
     int sumDay = mark + 31 + 28 + 31 + 30 - 1;    //设为1月1日出生
     int days[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     int birthYear = 1777;
-    int birthMonth = 4;
-    int birthDay = 30;
 
     int year = birthYear;
-    int month = 0;
+    int month = 1;
     int day = 0;
 
     while (sumDay >= 365) {    //小心mark = -1
@@ -55,7 +53,10 @@ int main(void) {
         day = 31;
     }
     
-    cout << year << month << day << endl;
+    cout << year << '-' ;
+    if (month < 10) cout << '0' << month;
+    else cout << month;
+    if (day < 10) cout << '-'<< '0' << day;
+    else cout << '-' << day;
     return 0;
-    
 }

@@ -821,3 +821,57 @@ person.say('hahaha')
 方法的重写。注意代码重用（调用父类的构造方法，调用父类的公有方法）。
 
 重点掌握（会应用）：类的定义与继承，方法的重写，类的实例化，方法的调用。
+
+```python
+class Pet:
+    nickName = ""
+    health = 0
+    def __init__(self, name, health) -> None:
+        self.nickName = name
+        self.health = health
+
+    def show(self):
+        print("Name:",self.nickName)
+        print("Health:",self.health)
+
+class Dog(Pet):
+    color = ""
+    def __init__(self, name, health, color) -> None:
+        super().__init__(name, health)
+        self.color = color
+
+    def show(self):
+        super().show()
+        print("Color:",self.color)
+
+    def feed(self):
+        self.health += 5
+
+d = Dog("毛毛",5,"黑色")
+d.feed()
+d.show()
+```
+
+# CH6以后
+
+## 掌握第三方库的安装方法
+
+```
+pip install xxx
+```
+
+## 窗体的定义方法
+
+```python
+import tkinter  #导入模块
+win = tkinter.TK()  #创建窗体实例对象
+win.mainloop  #显示窗体进入监听循环
+```
+
+## 窗体属性的设置方法
+```python
+win.geometry("1024x768")
+win.minsize(800,600)
+win.maxsize(1440,900)
+```
+（具体组件不做要求）

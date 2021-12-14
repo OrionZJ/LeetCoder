@@ -13,8 +13,7 @@
 using namespace std;
 
 bool judgeYear(int year) {
-    if (year % 4 == 0) return true;
-    else return false;
+    return year%400==0 || ((year%100) && year%4==0);
 }
 
 int main(void) {

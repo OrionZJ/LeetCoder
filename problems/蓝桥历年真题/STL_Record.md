@@ -1,11 +1,16 @@
 # next_permutation
 
+把区间内数组的数据改为他们全排列的下一个排列
+
 ```c++
 #include <algorithm>
 
 bool next_permutation(iterator start,iterator end)    //左闭右开区间
 ```
 当当前序列不存在下一个排列时，函数返回false，否则返回true；
+
+prev_permutation同理，求上一个排列。
+
 [例题：古堡算式](C语言_B组省赛真题/2012年第三届C_B组蓝桥杯省赛真题/02.古堡算式.cpp)
 
 # 比较浮点数
@@ -26,3 +31,22 @@ bool next_permutation(iterator start,iterator end)    //左闭右开区间
 > fabs是求浮点数绝对值的函数。
 
 # rand()函数
+
+```c
+int rand(void)
+```
+
+该函数返回一个范围在 0 到 RAND_MAX 之间的整数值。
+
+```c++
+// 输出 0 到 49 之间的随机数
+printf("%d\n", rand() % 50);
+```
+
+# 递归算法
+
+运用递归算法解决计算可能情况问题
+
+[例题：奇怪的比赛](C语言_B组省赛真题\2012年第三届C_B组\04.奇怪的比赛.cpp)
+
+[例题：第39级台阶](C语言_B组省赛真题\2013年第四届C_B组\03.第39级台阶.cpp)

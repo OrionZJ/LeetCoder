@@ -100,7 +100,7 @@ Usage: thingy [OPTIONS]
 - bool：True和False。（注意：首字母都是大写）
 
 ```python
-aa=123-12j
+aa=123-12j  # 或者aa=complex(123, -12)
 print aa.real  # output 实数部分 123.0 
 print aa.imag  # output虚数部分 -12.0
 ```
@@ -346,7 +346,10 @@ ranked_transcript = {
 
 print(ranked_transcript)
 ```
-键不可变，值可变
+
+- 键不可变，值可变
+- 同一个键不得出现两次。如果同一个键被赋值2次，则后一个值被记住
+- 可用数字、字符串或元组做键，用列表则不行
 
 通过两个列表创建字典的方法:
 ```python
@@ -381,7 +384,7 @@ s44=s1.union(s2) #{'tute', 'a', 'trtvc', 'yc', 'mia', 'hebut'}
 print(s33)
 print(s44)
 ```
-3. 集合的差集  s1.difference(s2) 将集合s1里去掉和s2交集的部分
+3. 集合的差集 s1-s2, s1.difference(s2) 将集合s1里去掉和s2交集的部分
 ```python
 #集合的差集 s1.difference(s2) 将集合s1里去掉和s2交集的部分
 s1={"a","mia","hebut","tute"}
@@ -391,7 +394,7 @@ s44=s2.difference(s1)#s44= {'trtvc', 'yc'} 将集合s2里去掉和s1交集的部
 print("s33=",s33) 
 print("s44=",s44)
 ```
-4. 集合的交叉补集  s.symmetric_difference() 并集里去掉交集的部分
+4. 集合的交叉补集 s1^s2, s.symmetric_difference() 并集里去掉交集的部分
 ```python
 # 集合的交叉补集 s.symmetric_difference()  并集里去掉交集的部分
 s1={"a","mia","hebut","tute"}

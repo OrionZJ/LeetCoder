@@ -582,7 +582,7 @@ print(f(1,2,3))
 ```
 2. 关键字参数
 ```python
-def f(a,b,c)
+def f(a,b,c):
      return a+b+c
 
 print(f(1,c=3,b=2))
@@ -592,7 +592,7 @@ print(f(1,c=3,b=2))
 def f(a,b,c=10):
      return a+b+c
 
-print(f(3,2))
+print(f(3,2)):
 print(f(3,2,1))
 ```
 
@@ -637,6 +637,21 @@ Hello Li hua, you are 24 years old
 ```
 
 ```python
+>>> name = "Mike"
+>>> age = 20
+>>> print(name, age)
+Mike 20
+>>> print(name, age, sep = ':')
+Mike:20
+```
+
+```python
+>>> import math
+>>> print('%4.2f' % math.pi)
+3.14
+```
+
+```python
 >>> print('{}:"{}!"'.format('hello', 'python'))
 hello:"python!"
 >>> print('{1} and {0}'.format('hello', 'python'))
@@ -663,10 +678,10 @@ python and hello
 ## 打开文件、关闭文件所用的函数
 
 ```python
-demo1=open("D:\python\pyDemo1.txt",'rt',encoding='UTF-8')
+demo1=open(r"D:\python\pyDemo1.txt",'rt',encoding='UTF-8')
 print("文件的文本形式打开方式内容是:{}".format(demo1.readline()))
 demo1.close()
-demo2=open("D:\python\pyDemo1.txt",'rb')
+demo2=open(r"D:\python\pyDemo1.txt",'rb')
 print("文件的二进制打开方式内容是:{}".format(demo2.readline()))
 demo2.close()
 ```

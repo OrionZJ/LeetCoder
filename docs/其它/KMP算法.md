@@ -1,4 +1,4 @@
-# 28.实现strStr()
+# KMP算法
 
 [LeetCode链接](https://leetcode-cn.com/problems/implement-strstr/)
 

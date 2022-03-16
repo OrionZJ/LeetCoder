@@ -60,7 +60,7 @@ vector< char > 和 string 在基本操作上没有区别，但是 string提供�
 解决问题：
 
 - [组合](problems/0077.组合/回溯算法.md)
-- 分割
+- [分割](problems/0131.分割回文串/分割问题.md)
 - 子集
 - 排列
 - 棋盘

@@ -61,8 +61,8 @@ vector< char > 和 string 在基本操作上没有区别，但是 string提供�
 
 - [组合](problems/0077.组合/回溯算法.md)
 - [分割](problems/0131.分割回文串/分割问题.md)
-- 子集
-- 排列
+- [子集](problems/0078.子集/子集问题.md)
+- [排列](problems/0046.全排列/全排列问题.md)
 - 棋盘
 - 其它
 

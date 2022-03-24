@@ -3,7 +3,7 @@
 //例如，3/4,5/2,1/8,7/1都是既约分数。
 //请问，有多少个既约分数，分子和分母都是1到2020之间的整数（包括1和2020）
 
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int maxYue(int a, int b) {

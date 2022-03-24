@@ -7,7 +7,7 @@
 //即需要1个字符0，2个字符1，1个字符7。
 //请问要制作所有的1到2020号门牌，总共需要多少个字符2？
 
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(void) {

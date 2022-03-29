@@ -58,6 +58,7 @@ public:
 		cout << row << ' ' << col << '\n';
 		if (row == 29 && col == 49) {
 			if (path.size() < ret.size()) {
+				cout << "HI"; 
 				ret.resize(path.size());
 				for (int i = 0; i < ret.size(); i++) {
 					ret[i] = path[i];
